@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ClusterRole
+metadata:
+  annotations:
+    authorization.openshift.io/system-only: "true"
+    openshift.io/description: A super-user that can perform any action in the cluster.
+      When granted to a user within a project, they have full control over quota and
+      membership and can perform every action on every resource in the project.
+  creationTimestamp: 2017-12-04T13:28:21Z
+  name: cluster-admin
+  resourceVersion: "15"
+  selfLink: /oapi/v1/clusterroles/cluster-admin
+  uid: ff1d748b-d8f6-11e7-8c47-b6fd3158f970
+rules:
+- apiGroups:
+  - '*'
+  attributeRestrictions: null
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups: null
+  attributeRestrictions: null
+  nonResourceURLs:
+  - '*'
+  resources: []
+  verbs:
+  - '*'
